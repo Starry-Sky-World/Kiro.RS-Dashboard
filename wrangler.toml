@@ -1,0 +1,7 @@
+name = "kiro-worker"
+main = "src/index.js"
+compatibility_date = "2026-01-03"
+
+kv_namespaces = [
+  { binding = "KV", id = "b2202781b1554b7aad1b64831503da14" }
+]
