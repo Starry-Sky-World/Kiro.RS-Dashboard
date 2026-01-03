@@ -1,4 +1,4 @@
-name = "kiro-worker"
+name = "kirors-board"
 main = "src/index.js"
 compatibility_date = "2026-01-03"
 
