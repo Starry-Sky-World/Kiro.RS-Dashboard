@@ -588,18 +588,18 @@ function getScripts() {
 
       tbody.innerHTML = result.credentials.map(cred => \`
         <tr>
-          <td>${cred.name}</td>
-          <td><span class="badge badge-${cred.authMethod === 'social' ? 'success' : 'warning'}">${cred.authMethod}</span></td>
-          <td>${cred.priority}</td>
+          <td>\${cred.name}</td>
+          <td><span class="badge badge-\${cred.authMethod === 'social' ? 'success' : 'warning'}">\${cred.authMethod}</span></td>
+          <td>\${cred.priority}</td>
           <td>
             <label class="toggle">
-              <input type="checkbox" ${cred.enabled ? 'checked' : ''} onchange="toggleCredential('${cred.id}')">
+              <input type="checkbox" \${cred.enabled ? 'checked' : ''} onchange="toggleCredential('\${cred.id}')">
               <span class="toggle-slider"></span>
             </label>
           </td>
           <td>
-            <button class="btn btn-secondary btn-sm" onclick="editCredential('${cred.id}')">编辑</button>
-            <button class="btn btn-danger btn-sm" onclick="deleteCredential('${cred.id}')">删除</button>
+            <button class="btn btn-secondary btn-sm" onclick="editCredential('\${cred.id}')">编辑</button>
+            <button class="btn btn-danger btn-sm" onclick="deleteCredential('\${cred.id}')">删除</button>
           </td>
         </tr>
       \`).join('');
