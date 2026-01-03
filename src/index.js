@@ -23,7 +23,10 @@ export default {
       // 路由分发
       // 公开 API (Shell 调用)
       if (url.pathname === '/api/credentials' && request.method === 'GET') {
-        return await handleShellCredentials(request, env);
+        const authHeader = request.headers.get('Authorization') || '';
+        if (authHeader.startsWith('Bearer ')) {
+          return await handleShellCredentials(request, env);
+        }
       }
 
       if (url.pathname === '/api/health') {
