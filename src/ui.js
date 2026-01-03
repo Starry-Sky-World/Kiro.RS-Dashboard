@@ -586,7 +586,7 @@ function getScripts() {
       const tbody = document.getElementById('credentialsTable');
       if (!tbody || !result.credentials) return;
 
-      tbody.innerHTML = result.credentials.map(cred => `
+      tbody.innerHTML = result.credentials.map(cred => \`
         <tr>
           <td>${cred.name}</td>
           <td><span class="badge badge-${cred.authMethod === 'social' ? 'success' : 'warning'}">${cred.authMethod}</span></td>
@@ -602,7 +602,7 @@ function getScripts() {
             <button class="btn btn-danger btn-sm" onclick="deleteCredential('${cred.id}')">删除</button>
           </td>
         </tr>
-      `).join('');
+      \`).join('');
     }
 
     // 切换凭据状态
